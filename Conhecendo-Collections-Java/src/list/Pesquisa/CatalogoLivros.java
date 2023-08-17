@@ -50,6 +50,7 @@ public class CatalogoLivros {
             for(Livro escolhido : livrosList){
                 if(escolhido.getTitulo().equalsIgnoreCase(titulo)){
                    livroPesquisadoTitulo = escolhido;
+                   break;
                 }
             }
         }
@@ -77,6 +78,7 @@ public class CatalogoLivros {
         livroList.adicionarLivros("O corvo", "Edgar Allan Poe", 1845);
         livroList.adicionarLivros("Assassinatos na rua Morgue", "Edgar Allan Poe", 1841);
         livroList.adicionarLivros("O ladrão de raios", "Rick Riordan", 2005);
+        livroList.adicionarLivros("O ladrão de raios", "Rick Riordan", 2008);
 
         livroList.exibirLivros(livroList.pesquisarPorAutor("Edgar Allan Poe"));
         System.out.println("------------------------------------"); 
