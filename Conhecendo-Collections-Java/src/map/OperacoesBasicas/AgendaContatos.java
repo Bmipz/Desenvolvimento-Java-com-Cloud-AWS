@@ -17,7 +17,9 @@ public class AgendaContatos {
 
     //remover um contato
     public void removerContato(String nome){
-        contatos.remove(nome);
+        if(!contatos.isEmpty()){
+            contatos.remove(nome);
+        }
     }
 
     //Exibir contatos
@@ -28,7 +30,9 @@ public class AgendaContatos {
     //pesquisar por nome
     public Integer pesquisarPorNome(String nome){
         Integer pesquisa = null;
-        pesquisa = contatos.get(nome);
+        if(!contatos.isEmpty()){
+            pesquisa = contatos.get(nome);
+        }
         return pesquisa;
     }
 

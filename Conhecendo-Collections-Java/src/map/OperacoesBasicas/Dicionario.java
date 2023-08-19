@@ -17,19 +17,21 @@ public class Dicionario {
 
     //removendo palavras pelo termo
     public void removerPalavra(String palavra){
-        palavraMap.remove(palavra);
+        if(!palavraMap.isEmpty()){
+            palavraMap.remove(palavra);
+        }
     }
    
     //exibir palavras
     public void exibirPalavras(){
-        System.out.println(palavraMap);
+        if(!palavraMap.isEmpty()){
+            System.out.println(palavraMap);
+        }  
     }
 
     //pesquisar por palavra
     public String pesquisarPorPalavra(String palavra){
-        String palavraPesquisada = "";
-        palavraPesquisada = palavraMap.get(palavra);
-        return palavraPesquisada;
+        return palavraMap.get(palavra);
     }
 
     public static void main(String[] args) {
